@@ -43,3 +43,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 3964502625
+    locked: 0
+  - name: BGfore
+    uniqueID: 773339113
+    locked: 0
+  - name: Game
+    uniqueID: 504800057
+    locked: 0
+  - name: New Layer
+    uniqueID: 3964299167
+    locked: 0
+  - name: New Layer
+    uniqueID: 2484594275
+    locked: 0
+  - name: Front
+    uniqueID: 1216407461
+    locked: 0

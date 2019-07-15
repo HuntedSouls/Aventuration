@@ -11,9 +11,17 @@ public class AtackControler : MonoBehaviour
     private Vector3 startPos;
     public Text atackText;
 
+    bool isAtacking=false;
+    bool isShowDialogue = false;
+
+    public GameObject answerDialogue;
+    public float dialogueShowTime = 3.0f;
+
     IEnumerator AttackAnim()
     {
-
+        answerDialogue.SetActive(false);
+        isShowDialogue = false;
+        isAtacking = true;
         target = boss.transform.position - new Vector3(2, -1f);
         startPos = transform.position;
         Debug.Log(target);
@@ -44,6 +52,17 @@ public class AtackControler : MonoBehaviour
         }
         atackText.text = "";
         yield return null;
+        isAtacking = false;
+    }
+
+    IEnumerator ShowDialogue()
+    {
+        isShowDialogue = true;
+        answerDialogue.SetActive(true);
+        yield return new WaitForSecondsRealtime(dialogueShowTime);
+        answerDialogue.SetActive(false);
+        isShowDialogue = false;
+
     }
     // Start is called before the first frame update
     void Start()
@@ -54,10 +73,18 @@ public class AtackControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
+            
     }
     void OnMouseDown()
     {
-        StartCoroutine(AttackAnim());
+        if(FindObjectOfType<QuestionControler>().isShowing==false && isAtacking==false && isShowDialogue==true)
+            StartCoroutine(AttackAnim());
+
+
+        if (FindObjectOfType<QuestionControler>().isShowing == false && isAtacking == false && isShowDialogue==false)
+        {
+            StartCoroutine(ShowDialogue());
+        }
     }
 }
