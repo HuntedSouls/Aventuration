@@ -10,6 +10,8 @@ public class AtackControler : MonoBehaviour
     private Vector3 target;
     private Vector3 startPos;
     public Text atackText;
+    public ScoreControler scoreCounter;
+
 
     bool isAtacking=false;
     bool isShowDialogue = false;
@@ -38,10 +40,12 @@ public class AtackControler : MonoBehaviour
         if (CompareTag("CorrectHero"))
         {
             atackText.text = "Acertei";
+            scoreCounter.score += 50;
         }
         else
         {
             atackText.text = "ERROU!";
+            scoreCounter.score -= 20;
         }
         target = startPos;
         while (transform.position != target)
@@ -67,7 +71,7 @@ public class AtackControler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tag = "CorrectHero";
+        //tag = "CorrectHero";
     }
 
     // Update is called once per frame
