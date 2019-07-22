@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BossSkeleton.unity
+    path: Assets/Scenes/BossBoomer.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MenuFeio.unity
+    guid: d74f864d6fe12db41be3ac3605aec748
+  - enabled: 1
+    path: Assets/Scenes/BossSkeleton.unity
+    guid: e52296c7c8254c64ca5a37aba07ba172
   m_configObjects: {}

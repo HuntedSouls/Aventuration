@@ -40,12 +40,18 @@ public class AtackControler : MonoBehaviour
         if (CompareTag("CorrectHero"))
         {
             atackText.text = "Acertei";
+            
             scoreCounter.score += 50;
+            QuestionSort.SetScore(scoreCounter.score);
+            FindObjectOfType<SceneControler>().NextQuestion();
         }
         else
         {
             atackText.text = "ERROU!";
+            
             scoreCounter.score -= 20;
+            QuestionSort.SetScore(scoreCounter.score);
+            FindObjectOfType<SceneControler>().NextQuestion();
         }
         target = startPos;
         while (transform.position != target)

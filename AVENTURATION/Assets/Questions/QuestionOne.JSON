@@ -1,9 +1,22 @@
 ﻿{
-	 "questionNumber" : 1,
-     "questionText" : "Qual destes nomes pertencia a um barbaro famoso? Um dos principais responsáveis por inspirar terror nos homens do reino civilizado.",
-     "optionA" : "Átila, o Huno",
-     "optionB" : "Ivan, o terrível",
-     "optionC" : "Bob",
-     "optionD" : "Michael Jackson, o rei do pop",
-     "correctAnswer" : "A"
+	"questions": [
+	{
+		 "questionNumber" : 1,
+		 "questionText" : "Qual destes nomes pertencia a um barbaro famoso? Um dos principais responsáveis por inspirar terror nos homens do reino civilizado.",
+		 "optionA" : "Átila, o Huno",
+		 "optionB" : "Ivan, o terrível",
+		 "optionC" : "Bob",
+		 "optionD" : "Michael Jackson, o rei do pop",
+		 "correctAnswer" : "A"
+	},
+	{
+		 "questionNumber" : 2,
+		 "questionText" : "Quatro homens (chame-os de 1, 2, 3 e 4) estão em fila na frente de um grupamento dos bombeiros. Eles estão todos olhando para a mesma direção, de maneira que '1' está no fim da fila e '4' está na frente da mesma. '1' e '3' estão usando chapéus pretos, e '2' e '4' estão usando chapéus brancos. Entre '3' e '4' há uma parede de concreto. Portanto, '1', no fim da fila, pode ver '2' e '3'. '2' pode ver '3'. Nem '3' nem '4' podem ver ninguém. Os homens sabem que dois deles estão usando chapéus pretos e dois deles estão usando chapéus brancos, mas não sabem qual chapéu está em sua própria cabeça. O comandante do grupamento lança um desafio: ele deixará todos irem embora se APENAS um falar corretamente a cor do próprio chapéu. Os homens não podem falar entre si. Qual dos homens sabe com certeza a cor de seu chapéu?",
+		 "optionA" : "Homem 1",
+		 "optionB" : "Homem 2",
+		 "optionC" : "Homem 3",
+		 "optionD" : "Homem 4",
+		 "correctAnswer" : "B"
+	}
+	 ]
 }

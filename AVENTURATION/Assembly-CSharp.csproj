@@ -66,9 +66,13 @@
     <Compile Include="Assets\Scripts\BossQuestion.cs" />
     <Compile Include="Assets\Scripts\QuestionControler.cs" />
     <Compile Include="Assets\Scripts\QuestionData.cs" />
+    <Compile Include="Assets\Scripts\QuestionDataCollection.cs" />
     <Compile Include="Assets\Scripts\QuestionLoader.cs" />
+    <Compile Include="Assets\Scripts\QuestionSort.cs" />
+    <Compile Include="Assets\Scripts\SceneControler.cs" />
     <Compile Include="Assets\Scripts\ScoreControler.cs" />
     <Compile Include="Assets\Scripts\SpriteRotation.cs" />
+    <Compile Include="Assets\Scripts\StartMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>G:/Users/Joshua/Douments/unityProjects/Aventuration/AVENTURATION/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

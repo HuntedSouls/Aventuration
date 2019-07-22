@@ -7,13 +7,15 @@ using System.IO;
 public class QuestionLoader : MonoBehaviour
 {
     string path;
-    QuestionData question;
+    public QuestionDataCollection questions;
+    public QuestionData currentQuestion;
     public Text questionText;
     public GameObject heroA;
     public GameObject heroB;
     public GameObject heroC;
     public GameObject heroD;
     
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +24,10 @@ public class QuestionLoader : MonoBehaviour
         StreamReader streamReader = new StreamReader(path);
         string jsonstring = streamReader.ReadToEnd();
         Debug.Log(jsonstring);
-        question = QuestionData.GetQuestionData(jsonstring);
-        questionText.text =  question.questionText;
-        switch (question.correctAnswer)
+        questions = QuestionDataCollection.GetQuestionData(jsonstring);
+        currentQuestion = questions.questions[QuestionSort.currentQuestion - 1];
+        questionText.text = currentQuestion.questionText;
+        switch (currentQuestion.correctAnswer)
         {
             case "A":
                 heroA.tag = "CorrectHero";
@@ -39,10 +42,10 @@ public class QuestionLoader : MonoBehaviour
                 heroD.tag = "CorrectHero";
                 break;
         }
-        heroA.GetComponent<AtackControler>().answerDialogue.GetComponentInChildren<Text>().text = question.optionA;
-        heroB.GetComponent<AtackControler>().answerDialogue.GetComponentInChildren<Text>().text = question.optionB;
-        heroC.GetComponent<AtackControler>().answerDialogue.GetComponentInChildren<Text>().text = question.optionC;
-        heroD.GetComponent<AtackControler>().answerDialogue.GetComponentInChildren<Text>().text = question.optionD;
+        heroA.GetComponent<AtackControler>().answerDialogue.GetComponentInChildren<Text>().text = currentQuestion.optionA;
+        heroB.GetComponent<AtackControler>().answerDialogue.GetComponentInChildren<Text>().text = currentQuestion.optionB;
+        heroC.GetComponent<AtackControler>().answerDialogue.GetComponentInChildren<Text>().text = currentQuestion.optionC;
+        heroD.GetComponent<AtackControler>().answerDialogue.GetComponentInChildren<Text>().text = currentQuestion.optionD;
     }
 
     // Update is called once per frame
